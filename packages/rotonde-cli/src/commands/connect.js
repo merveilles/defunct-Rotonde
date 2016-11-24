@@ -7,7 +7,7 @@ import Client from 'socket.io-client';
  */
 export function connectFactory(vorpal) {
   vorpal
-    .command('connect <host>')
+    .command('connect <instance>')
     .description('Connects to a Rotonde instance.')
     .action(function (args, callback) {
       const { host } = args;
