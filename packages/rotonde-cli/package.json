@@ -1,6 +1,6 @@
 {
   "name": "rotonde-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rotonde command line.",
   "main": "lib/index.js",
   "bin": {
