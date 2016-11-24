@@ -1,4 +1,5 @@
 import { connectFactory } from './connect';
+import { createFactory } from './create';
 
 /**
  * Registers commands with Vorpal.
@@ -7,7 +8,8 @@ import { connectFactory } from './connect';
  */
 export function registerCommands(vorpal) {
   const commandFactories = [
-    connectFactory
+    connectFactory,
+    createFactory
   ];
   commandFactories.forEach(commandFactory => {
     commandFactory(vorpal);
