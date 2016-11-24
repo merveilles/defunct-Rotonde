@@ -1,0 +1,38 @@
+{
+  "name": "rotonde-deploy-now",
+  "version": "1.0.0",
+  "description": "Deploy Rotonde to now (https://zeit.co/now/).",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "dev": "babel-node -- src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merveilles/Rotonde.git"
+  },
+  "keywords": [
+    "rotonde"
+  ],
+  "author": "Merveilles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/merveilles/Rotonde/issues"
+  },
+  "homepage": "https://github.com/merveilles/Rotonde/tree/master/packages/rotonde-deploy-now#readme",
+  "files": [
+    "lib/"
+  ],
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "now-client": "^0.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
+    "babel-preset-es2015": "^6.18.0"
+  }
+}
