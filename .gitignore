@@ -1,4 +1,12 @@
 #
+# Rotonde
+#
+
+# Exclude .env file
+# (See: https://www.npmjs.com/package/dotenv#should-i-commit-my-env-file)
+.env
+
+#
 # Node
 #
 
