@@ -30,6 +30,7 @@
     "lib/"
   ],
   "dependencies": {
+    "rotonde-deploy": "^1.0.0",
     "socket.io-client": "^1.6.0",
     "vorpal": "^1.11.4"
   },

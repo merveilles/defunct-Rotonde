@@ -1,4 +1,5 @@
 import Client from 'socket.io-client';
+import deploy from 'rotonde-deploy';
 
 /**
  * Registers the `create` command.
@@ -15,13 +16,30 @@ export function createFactory(vorpal) {
         name: 'service',
         message: 'Where would you like to create your instance?',
         choices: [
-          'Local',
-          'Server',
-          'now',
-          'AWS'
+          {
+            name: 'Local',
+            value: 'local'
+          },
+          {
+            name: 'Server',
+            value: 'server'
+          },
+          {
+            name: 'now',
+            value: 'now'
+          },
+          {
+            name: 'AWS',
+            value: 'aws'
+          }
         ]
-      }, result => {
-        console.log(result)
+      }, async result => {
+        const { service } = result;
+        try {
+          await deploy(service);
+        } catch (err) {
+          throw err;
+        }
         callback();
       });
     });
