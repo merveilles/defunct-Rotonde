@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/merveilles/Rotonde/issues"
   },
-  "homepage": "https://github.com/merveilles/Rotonde#readme"
+  "homepage": "https://github.com/merveilles/Rotonde/tree/master/packages/rotonde-core#readme",
+  "devDependencies": {
+    "typescript": "^2.1.1"
+  }
 }
