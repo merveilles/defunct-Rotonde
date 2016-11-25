@@ -2,7 +2,11 @@ import fs from 'fs-extra';
 import path from 'path';
 import { exec } from 'child_process';
 import shellEnv from 'shell-env';
-import { getPlugins } from './config';
+import {
+  getPlugins,
+  getPluginsDirectory,
+  getLocalPluginsDirectory
+} from './config';
 
 /**
  * Installs the plugins.
@@ -15,11 +19,11 @@ export function installPlugins() {
     } catch (err) {
       return reject(err);
     }
-    const pluginsDir = path.join(__dirname, '../.rotonde_plugins');
-    fs.mkdirpSync(pluginsDir);
-    createPluginsPackageJson(pluginsDir, getPlugins());
+    const pluginsDirectory = getPluginsDirectory();
+    fs.mkdirpSync(pluginsDirectory);
+    createPluginsPackageJson(pluginsDirectory, getPlugins());
     exec('npm prune && npm install --production', {
-      cwd: pluginsDir,
+      cwd: pluginsDirectory,
       env
     }, err => {
       if (err) {
@@ -33,9 +37,9 @@ export function installPlugins() {
 /**
  * Creates a `package.json` file for the plugins.
  *
- * @param pluginsDir The directory in which the plugins will be installed.
+ * @param pluginsDirectory The directory in which the plugins will be installed.
  */
-function createPluginsPackageJson(pluginsDir, plugins) {
+function createPluginsPackageJson(pluginsDirectory, plugins) {
   const dependencies = toDependencies(plugins);
   const pluginsPackage = {
     name: 'rotonde-core-plugins',
@@ -44,7 +48,7 @@ function createPluginsPackageJson(pluginsDir, plugins) {
     version: '1.0.0',
     dependencies
   };
-  const filename = path.resolve(pluginsDir, 'package.json');
+  const filename = path.resolve(pluginsDirectory, 'package.json');
   try {
     fs.writeFileSync(filename, JSON.stringify(pluginsPackage, null, 2));
   } catch (err) {

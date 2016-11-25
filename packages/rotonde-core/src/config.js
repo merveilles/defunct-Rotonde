@@ -20,10 +20,24 @@ export function getConfig() {
 }
 
 /**
+ * Returns the path to the plugins directory.
+ */
+export function getPluginsDirectory() {
+  return path.join(__dirname, '../.rotonde_plugins');
+}
+
+/**
  * Returns the list of plugins.
  */
 export function getPlugins() {
   return getConfig().plugins;
+}
+
+/**
+ * Returns the path to the local plugins directory.
+ */
+export function getLocalPluginsDirectory() {
+  return path.join(getPluginsDirectory(), 'local');
 }
 
 /**
