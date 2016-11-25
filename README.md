@@ -2,6 +2,12 @@
 
 > Decentralized communication protocol.
 
+- [Contributing](#contributing)
+- [Packages](#packages)
+  - [Core Packages](#core-packages)
+  - [Client Packages](#client-packages)
+  - [Deployment Packages](#deployment-packages)
+
 ## Contributing
 
 Want to contribute to Rotonde? Have a look at our [contributing documentation](/CONTRIBUTING.md).
