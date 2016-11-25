@@ -1,1 +1,3 @@
 # Rotonde
+
+> Decentralized communication protocol.
