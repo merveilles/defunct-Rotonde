@@ -1,6 +1,6 @@
 {
   "name": "rotonde-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Rotonde command line.",
   "main": "lib/index.js",
   "bin": {
@@ -30,7 +30,7 @@
     "lib/"
   ],
   "dependencies": {
-    "rotonde-core-messages": "^1.0.3",
+    "rotonde-core-messages": "^1.0.4",
     "rotonde-deploy": "^1.0.3",
     "socket.io-client": "^1.6.0",
     "vorpal": "^1.11.4"
