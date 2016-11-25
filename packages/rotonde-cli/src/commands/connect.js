@@ -15,6 +15,9 @@ export function connectFactory(vorpal) {
       socket.on('connect', () => {
         this.log(`Connected to ${instance}`);
       });
+      socket.on('rotonde.acknowledge', payload => {
+        console.log(payload);
+      });
       callback();
     });
 }
