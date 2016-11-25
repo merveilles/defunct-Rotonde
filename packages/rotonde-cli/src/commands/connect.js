@@ -10,10 +10,10 @@ export function connectFactory(vorpal) {
     .command('connect <instance>')
     .description('Connects to a Rotonde instance.')
     .action(function (args, callback) {
-      const { host } = args;
-      const socket = Client(host);
+      const { instance } = args;
+      const socket = Client(instance);
       socket.on('connect', () => {
-        this.log(`Connected to ${host}`);
+        this.log(`Connected to ${instance}`);
       });
       callback();
     });
