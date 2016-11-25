@@ -28,8 +28,10 @@
   "dependencies": {
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
+    "fs-extra": "^1.0.0",
     "morgan": "^1.7.0",
     "rotonde-core-messages": "^1.0.5",
+    "shell-env": "^0.3.0",
     "socket.io": "^1.6.0"
   },
   "devDependencies": {
