@@ -7,13 +7,14 @@ import deploy from 'rotonde-deploy';
  * @param vorpal The Vorpal instance.
  */
 export function createFactory(vorpal) {
+  const { chalk } = vorpal;
   vorpal
     .command('create')
     .description('Creates a Rotonde instance.')
     .action(function (args, callback) {
       this.prompt({
         type: 'list',
-        name: 'service',
+        name: 'target',
         message: 'Where would you like to create your instance?',
         choices: [
           {
@@ -34,11 +35,11 @@ export function createFactory(vorpal) {
           }
         ]
       }, async result => {
-        const { service } = result;
+        const { target } = result;
         try {
-          await deploy(service);
+          await deploy(target);
         } catch (err) {
-          throw err;
+          this.log(chalk.red(err.message));
         }
         callback();
       });
