@@ -14,7 +14,7 @@ fs.mkdirs(directory, err => {
       start: 'node index.js'
     },
     dependencies: {
-      'rotonde-core': '^1.0.0'
+      'rotonde-core': '*'
     }
   };
   fs.writeFile(path.join(directory, 'index.js'), `require('rotonde-core/lib/index');`, err => {
