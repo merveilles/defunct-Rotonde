@@ -21,6 +21,7 @@ export function installPlugins() {
     }
     const pluginsDirectory = getPluginsDirectory();
     fs.mkdirpSync(pluginsDirectory);
+    fs.mkdirpSync(getLocalPluginsDirectory());
     createPluginsPackageJson(pluginsDirectory, getPlugins());
     exec('npm prune && npm install --production', {
       cwd: pluginsDirectory,
