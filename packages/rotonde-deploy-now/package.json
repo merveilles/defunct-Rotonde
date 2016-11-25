@@ -27,6 +27,7 @@
   ],
   "dependencies": {
     "dotenv": "^2.0.0",
+    "fs-extra": "^1.0.0",
     "now-client": "^0.7.0"
   },
   "devDependencies": {
