@@ -2,6 +2,10 @@
 
 > Decentralized communication protocol.
 
+## Contributing
+
+Want to contribute to Rotonde? Have a look at our [contributing documentation](/CONTRIBUTING.md).
+
 ## Packages
 
 The Rotonde repo is managed as a monorepo; it's composed of many [npm](https://www.npmjs.com/) packages.
