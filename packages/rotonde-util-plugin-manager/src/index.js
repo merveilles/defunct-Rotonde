@@ -18,7 +18,7 @@ export function installPlugins(pluginsDirectory, plugins) {
       return reject(err);
     }
     fs.mkdirpSync(pluginsDirectory);
-    createPluginsPackageJson(pluginsDirectory, getPlugins());
+    createPluginsPackageJson(pluginsDirectory, plugins);
     exec('npm prune && npm install --production', {
       cwd: pluginsDirectory,
       env
