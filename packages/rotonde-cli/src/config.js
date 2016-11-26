@@ -63,6 +63,23 @@ export function getPlugins() {
 }
 
 /**
+ * Returns the list of local plugins.
+ */
+export function getLocalPlugins() {
+  return getConfig().localPlugins;
+}
+
+/**
+ * Returns all of the plugins.
+ */
+export function getAllPlugins() {
+  return {
+    plugins: getPlugins(),
+    localPlugins: getLocalPlugins()
+  };
+}
+
+/**
  * Adds the specified plugin to the config.
  *
  * @param plugin The plugin to add.

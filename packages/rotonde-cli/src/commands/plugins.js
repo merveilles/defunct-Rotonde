@@ -1,4 +1,4 @@
-import { addPlugin, addLocalPlugin, removePlugin, getPlugins } from '../config';
+import { addPlugin, addLocalPlugin, removePlugin, getAllPlugins } from '../config';
 import installPlugins from '../plugins';
 
 /**
@@ -32,9 +32,14 @@ export default function pluginsFactory(vorpal) {
     .alias('plugins ls')
     .description('Lists installed plugins.')
     .action(function (args, callback) {
-      const plugins = getPlugins();
-      this.log(`Installed Plugins (${plugins.length}):`);
-      this.log(plugins.map(plugin => `    * ${plugin}`).join('\n'));
+      const { plugins, localPlugins } = getAllPlugins();
+      this.log(`Installed Plugins (${plugins.length + localPlugins.length}):`);
+      if (plugins.length > 0) {
+        this.log(plugins.map(plugin => `    * ${plugin}`).join('\n'));
+      }
+      if (localPlugins.length > 0) {
+        this.log(localPlugins.map(plugin => `    * (LOCAL) ${plugin}`).join('\n'));
+      }
       callback();
     });
   vorpal
