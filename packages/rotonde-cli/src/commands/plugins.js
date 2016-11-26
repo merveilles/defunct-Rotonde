@@ -1,5 +1,5 @@
 import { addPlugin, getPlugins } from '../config';
-import { installPlugins } from '../plugins';
+import installPlugins from '../plugins';
 
 /**
  * Registers the `plugins` commands.
@@ -7,6 +7,7 @@ import { installPlugins } from '../plugins';
  * @param vorpal The Vorpal instance.
  */
 export default function pluginsFactory(vorpal) {
+  const { chalk } = vorpal;
   vorpal
     .command('plugins install <plugin>')
     .description('Installs a plugin.')

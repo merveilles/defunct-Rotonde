@@ -68,7 +68,7 @@ export function getPlugins() {
  * @param plugin The plugin to add.
  */
 export function addPlugin(plugin) {
-  let { plugins } = config;
+  const { plugins } = config;
   if (plugins.indexOf(plugin) !== -1) {
     return;
   }

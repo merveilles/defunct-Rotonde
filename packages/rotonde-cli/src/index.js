@@ -1,5 +1,5 @@
 import Vorpal from 'vorpal';
-import { installPlugins } from './plugins';
+import installPlugins from './plugins';
 import registerCommands from './commands';
 
 installPlugins().then(() => {
