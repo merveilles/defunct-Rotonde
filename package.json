@@ -3,6 +3,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "lerna": "lerna",
     "test": "xo",
     "flow": "flow"
   },
