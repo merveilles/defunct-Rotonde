@@ -18,7 +18,7 @@ fs.readdir(packagesDirectory, (err, packages) => {
     .map(deduplicateDevDependencies)
     .forEach(packageJson => {
       const filename = path.resolve(packagesDirectory, packageJson.name, 'package.json');
-      fs.writeFileSync(filename, JSON.stringify(packageJson, null, 2));
+      fs.writeFileSync(filename, JSON.stringify(packageJson, null, 2) + '\n');
     });
 });
 
