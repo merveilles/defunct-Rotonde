@@ -8,6 +8,7 @@
   - [Client Packages](#client-packages)
   - [Plugin Packages](#plugin-packages)
   - [Deployment Packages](#deployment-packages)
+  - [Utility Packages](#utility-packages)
 
 ## Contributing
 
@@ -48,6 +49,8 @@ The Rotonde CLI is a command line interface for interacting with Rotonde.
 
 ### Plugin Packages
 
+The plugin packages extend Rotonde core and the various Rotonde clients with additional functionality.
+
 #### [`rotonde-plugin`](/packages/rotonde-plugin)
 
 [![npm](https://img.shields.io/npm/v/rotonde-plugin.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-plugin)
@@ -72,3 +75,14 @@ The `rotonde-deploy` package contains the logic for orchestrating deployments to
 [![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-deploy-now)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-deploy-now)
 
 The `rotonde-deploy-now` package provides the ability to deploy a Rotonde instance to [now](https://zeit.co/now).
+
+### Utility Packages
+
+The utility packages are used to share common functionality between Rotonde packages. These will mostly be used by Rotonde core.
+
+#### [`rotonde-util-plugin-manager`](/packages/rotonde-util-plugin-manager)
+
+[![npm](https://img.shields.io/npm/v/rotonde-util-plugin-manager.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-util-plugin-manager)
+[![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-util-plugin-manager)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-util-plugin-manager)
+
+The `rotonde-util-plugin-manager` provides the ability to manager plugins for Rotonde core and Rotonde clients.
