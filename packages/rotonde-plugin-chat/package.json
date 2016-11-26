@@ -1,6 +1,6 @@
 {
   "name": "rotonde-plugin-chat",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Chat for Rotonde.",
   "main": "lib/index.js",
   "scripts": {
@@ -25,8 +25,8 @@
     "lib/"
   ],
   "dependencies": {
-    "rotonde-plugin": "^1.0.6",
-    "rotonde-plugin-chat-messages": "^1.0.6"
+    "rotonde-plugin": "^1.0.8",
+    "rotonde-plugin-chat-messages": "^1.0.8"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

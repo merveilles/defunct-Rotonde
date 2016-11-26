@@ -1,6 +1,6 @@
 {
   "name": "rotonde-deploy",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Deploy Rotonde.",
   "main": "lib/index.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "lib/"
   ],
   "dependencies": {
-    "rotonde-deploy-now": "^1.0.5"
+    "rotonde-deploy-now": "^1.0.8"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

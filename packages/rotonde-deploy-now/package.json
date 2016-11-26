@@ -1,6 +1,6 @@
 {
   "name": "rotonde-deploy-now",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Deploy Rotonde to now (https://zeit.co/now/).",
   "main": "lib/index.js",
   "scripts": {

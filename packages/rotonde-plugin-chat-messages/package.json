@@ -1,6 +1,6 @@
 {
   "name": "rotonde-plugin-chat-messages",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Messages for `rotonde-plugin-chat`.",
   "main": "lib/index.js",
   "scripts": {

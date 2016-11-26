@@ -1,6 +1,6 @@
 {
   "name": "rotonde-plugin-chat-client-adapter-cli",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "CLI client adapter for `rotonde-plugin-chat`.",
   "main": "lib/index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "lib/"
   ],
   "dependencies": {
-    "rotonde-plugin": "^1.0.6"
+    "rotonde-plugin": "^1.0.8"
   },
   "peerDependencies": {
     "rotonde-plugin-chat": "^1.0.6"

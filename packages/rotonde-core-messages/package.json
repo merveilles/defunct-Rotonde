@@ -1,6 +1,6 @@
 {
   "name": "rotonde-core-messages",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Messages for Rotonde core.",
   "main": "lib/index.js",
   "scripts": {
