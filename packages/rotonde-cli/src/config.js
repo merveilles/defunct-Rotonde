@@ -52,7 +52,11 @@ export function getConfig() {
  * Returns the path to the plugins directory.
  */
 export function getPluginsDirectory() {
-  return path.join(__dirname, '../.rotonde_plugins');
+  const pluginsDirectory = '.rotonde_plugins';
+  if (process.env.NODE_ENV === 'development') {
+    return path.join(__dirname, `../${pluginsDirectory}`);
+  }
+  return path.join(os.homedir(), pluginsDirectory);
 }
 
 /**
@@ -77,6 +81,29 @@ export function getAllPlugins() {
     plugins: getPlugins(),
     localPlugins: getLocalPlugins()
   };
+}
+
+export function getPluginPaths() {
+  return {
+    plugins: getPlugins().map(name => path.resolve(getPluginsDirectory(), 'node_modules', name.split('#')[0])),
+    localPlugins: getLocalPlugins().map(name => path.resolve(__dirname, '../', name))
+  };
+}
+
+export function loadPlugin(plugin) {
+  try {
+    // eslint-disable-next-line import/no-dynamic-require
+    return require(plugin);
+  } catch (err) {
+    return undefined;
+  }
+}
+
+export function loadPlugins() {
+  const { plugins, localPlugins } = getPluginPaths();
+  return [...plugins, ...localPlugins]
+    .map(loadPlugin)
+    .filter(plugin => Boolean(plugin));
 }
 
 /**
