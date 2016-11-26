@@ -6,6 +6,7 @@
 - [Packages](#packages)
   - [Core Packages](#core-packages)
   - [Client Packages](#client-packages)
+  - [Plugin Packages](#plugin-packages)
   - [Deployment Packages](#deployment-packages)
 
 ## Contributing
@@ -44,6 +45,15 @@ The client packages provide various clients for interacting with Rotonde.
 [![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-cli)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-cli)
 
 The Rotonde CLI is a command line interface for interacting with Rotonde.
+
+### Plugin Packages
+
+#### [`rotonde-plugin`](/packages/rotonde-plugin)
+
+[![npm](https://img.shields.io/npm/v/rotonde-plugin.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-plugin)
+[![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-plugin)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-plugin)
+
+The `rotonde-plugin` package contains the base classes for the client and server components of a Rotonde plugin.
 
 ### Deployment Packages
 
