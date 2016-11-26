@@ -4,8 +4,10 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.renderWhitespace": "boundary",
+  "javascript.validate.enable": false,
   "xo.enable": true,
   "xo.options": {
+    "parser": "babel-eslint",
     "space": 2,
     "esnext": true,
     "rules": {

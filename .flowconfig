@@ -1,0 +1,13 @@
+[ignore]
+.*/packages/.*/lib
+.*/packages/.*/test
+
+[include]
+packages/*/src
+
+[options]
+munge_underscores=true
+module.ignore_non_literal_requires=true
+
+[version]
+^0.36.0

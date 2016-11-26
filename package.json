@@ -3,13 +3,17 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "test": "xo"
+    "test": "xo",
+    "flow": "flow"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "flow-bin": "^0.36.0",
     "lerna": "2.0.0-beta.30",
     "xo": "^0.17.1"
   },
   "xo": {
+    "parser": "babel-eslint",
     "space": 2,
     "esnext": true,
     "rules": {
