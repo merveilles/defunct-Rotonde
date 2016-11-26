@@ -1,7 +1,8 @@
 import Server from 'socket.io';
+import { getPluginsDirectory } from 'rotonde-util-config-manager';
 import installPlugins from 'rotonde-util-plugin-manager';
 import server from './server';
-import { getPlugins, getPluginsDirectory } from './config';
+import { getPlugins } from './config';
 import registerHandlers from './handlers';
 
 const httpServer = server(async app => {
