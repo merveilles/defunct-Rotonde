@@ -1,16 +1,12 @@
 {
-  "name": "rotonde-cli",
+  "name": "rotonde-util-config-manager",
   "version": "1.0.8",
-  "description": "Rotonde command line.",
+  "description": "A config manager for Rotonde.",
   "main": "lib/index.js",
-  "bin": {
-    "rotonde": "./bin/rotonde"
-  },
   "scripts": {
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d lib",
-    "dev": "npm run build && NODE_ENV=development node lib/index.js"
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -24,20 +20,12 @@
   "bugs": {
     "url": "https://github.com/merveilles/Rotonde/issues"
   },
-  "homepage": "https://github.com/merveilles/Rotonde/tree/master/packages/rotonde-cli#readme",
+  "homepage": "https://github.com/merveilles/Rotonde/tree/master/packages/rotonde-util-config-manager#readme",
   "files": [
-    "bin/",
     "lib/"
   ],
   "dependencies": {
-    "fs-extra": "^1.0.0",
-    "rotonde-core-messages": "^1.0.8",
-    "rotonde-deploy": "^1.0.8",
-    "rotonde-plugin": "^1.0.8",
-    "rotonde-util-config-manager": "^1.0.8",
-    "rotonde-util-plugin-manager": "^1.0.8",
-    "socket.io-client": "^1.6.0",
-    "vorpal": "^1.11.4"
+    "fs-extra": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
