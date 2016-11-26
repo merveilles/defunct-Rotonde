@@ -75,3 +75,21 @@ export function addPlugin(plugin) {
   config.plugins = [...plugins, plugin].sort();
   saveConfig(config);
 }
+
+/**
+ * Removes the specified plugin from the config.
+ *
+ * @param plugin The plugin to remove.
+ */
+export function removePlugin(plugin) {
+  const { plugins } = config;
+  const pluginIndex = plugins.indexOf(plugin);
+  if (pluginIndex === -1) {
+    return;
+  }
+  config.plugins = [
+    ...plugins.slice(0, pluginIndex),
+    ...plugins.slice(pluginIndex + 1)
+  ].sort();
+  saveConfig(config);
+}
