@@ -1,8 +1,2 @@
-import { RotondePlugin } from 'rotonde-plugin';
-
-/**
- * The Rotonde chat plugin.
- */
-export class ChatPlugin extends RotondePlugin {
-
-}
+export * from './ChatClientPlugin';
+export * from './ChatServerPlugin';
