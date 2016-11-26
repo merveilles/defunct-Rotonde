@@ -10,16 +10,23 @@ export default function pluginsFactory(vorpal) {
   const { chalk } = vorpal;
   vorpal
     .command('plugins install <plugin>')
+    .option('-a, --adapter <adapter>', 'Specify a specific client adapter.')
     .option('-l, --local', 'Installs a local plugin.')
     .alias('plugins i')
     .description('Installs a plugin.')
     .action(async function (args, callback) {
-      const { plugin, options: { local } } = args;
+      const { plugin, options: { local, adapter } } = args;
       if (local) {
         addLocalPlugin(plugin);
+        if (adapter) {
+          addLocalPlugin(adapter);
+        }
         return callback();
       }
       addPlugin(plugin);
+      if (adapter) {
+        addPlugin(adapter);
+      }
       try {
         await installPlugins();
       } catch (err) {
