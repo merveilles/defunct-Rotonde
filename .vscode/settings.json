@@ -5,6 +5,11 @@
   "editor.detectIndentation": false,
   "editor.renderWhitespace": "boundary",
   "javascript.validate.enable": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/packages/*/lib": true
+  },
   "xo.enable": true,
   "xo.options": {
     "parser": "babel-eslint",
