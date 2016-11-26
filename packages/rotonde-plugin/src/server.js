@@ -1,7 +1,7 @@
 /**
  * The base class for a Rotonde server plugin.
  */
-export class RotondeServerPlugin {
+export default class RotondeServerPlugin {
 
   /**
    * Creates a new Rotonde server plugin instance.

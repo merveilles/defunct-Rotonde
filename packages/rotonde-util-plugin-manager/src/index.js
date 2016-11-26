@@ -1,6 +1,6 @@
-import fs from 'fs-extra';
 import path from 'path';
 import { exec } from 'child_process';
+import fs from 'fs-extra';
 import shellEnv from 'shell-env';
 
 /**
@@ -9,7 +9,7 @@ import shellEnv from 'shell-env';
  * @param pluginsDirectory The directory in which the plugins will be installed.
  * @param The list of plugins.
  */
-export function installPlugins(pluginsDirectory, plugins) {
+export default function installPlugins(pluginsDirectory, plugins) {
   return new Promise(async (resolve, reject) => {
     let env;
     try {
@@ -18,7 +18,7 @@ export function installPlugins(pluginsDirectory, plugins) {
       return reject(err);
     }
     fs.mkdirpSync(pluginsDirectory);
-    createPluginsPackageJson(pluginsDirectory, getPlugins());
+    createPluginsPackageJson(pluginsDirectory, plugins);
     exec('npm prune && npm install --production', {
       cwd: pluginsDirectory,
       env

@@ -1,6 +1,6 @@
-import fs from 'fs-extra';
 import path from 'path';
 import { spawn } from 'child_process';
+import fs from 'fs-extra';
 
 const directory = path.join(__dirname, '../dist');
 fs.mkdirs(directory, err => {
@@ -18,6 +18,9 @@ fs.mkdirs(directory, err => {
     }
   };
   fs.writeFile(path.join(directory, 'index.js'), `require('rotonde-core/lib/index');`, err => {
+    if (err) {
+      throw err;
+    }
     fs.writeJson(packageJsonPath, packageJson, err => {
       if (err) {
         throw err;
@@ -28,7 +31,7 @@ fs.mkdirs(directory, err => {
         stdio: 'inherit'
       });
       now.on('close', code => {
-        console.log('done');
+        console.log('done', code);
       });
     });
   });

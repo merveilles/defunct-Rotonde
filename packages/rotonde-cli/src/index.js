@@ -1,6 +1,6 @@
 import Vorpal from 'vorpal';
-import { registerCommands } from './commands';
+import registerCommands from './commands';
 
-const vorpal = Vorpal();
+const vorpal = new Vorpal();
 registerCommands(vorpal);
 vorpal.show();
