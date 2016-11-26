@@ -6,10 +6,10 @@ import { installPlugins } from './plugins';
 const httpServer = server(async app => {
   console.log(`Rotonde listening on ${app.get('host')}:${app.get('port')}`);
   const io = new Server(httpServer);
-  registerHandlers(io);
   try {
     await installPlugins();
   } catch (err) {
     console.error(err);
   }
+  registerHandlers(io);
 });
