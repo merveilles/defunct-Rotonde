@@ -2,16 +2,14 @@ import fs from 'fs-extra';
 import path from 'path';
 import { exec } from 'child_process';
 import shellEnv from 'shell-env';
-import {
-  getPlugins,
-  getPluginsDirectory,
-  getLocalPluginsDirectory
-} from './config';
 
 /**
  * Installs the plugins.
+ *
+ * @param pluginsDirectory The directory in which the plugins will be installed.
+ * @param The list of plugins.
  */
-export function installPlugins() {
+export function installPlugins(pluginsDirectory, plugins) {
   return new Promise(async (resolve, reject) => {
     let env;
     try {
@@ -19,9 +17,7 @@ export function installPlugins() {
     } catch (err) {
       return reject(err);
     }
-    const pluginsDirectory = getPluginsDirectory();
     fs.mkdirpSync(pluginsDirectory);
-    fs.mkdirpSync(getLocalPluginsDirectory());
     createPluginsPackageJson(pluginsDirectory, getPlugins());
     exec('npm prune && npm install --production', {
       cwd: pluginsDirectory,
@@ -39,6 +35,7 @@ export function installPlugins() {
  * Creates a `package.json` file for the plugins.
  *
  * @param pluginsDirectory The directory in which the plugins will be installed.
+ * @param The list of plugins.
  */
 function createPluginsPackageJson(pluginsDirectory, plugins) {
   const dependencies = toDependencies(plugins);
