@@ -1,30 +1,12 @@
 import path from 'path';
-import fs from 'fs-extra';
+import { initializeConfig, getConfig, getPluginsDirectory } from 'rotonde-util-config-manager';
 
 const defaultConfig = {
   plugins: [],
   localPlugins: []
 };
 
-let config = Object.assign({}, defaultConfig);
-
-const configFile = path.join(__dirname, '../.rotonde.json');
-const contents = fs.readFileSync(configFile, 'utf8');
-config = Object.assign({}, config, JSON.parse(contents));
-
-/**
- * Returns the config.
- */
-export function getConfig() {
-  return config;
-}
-
-/**
- * Returns the path to the plugins directory.
- */
-export function getPluginsDirectory() {
-  return path.join(__dirname, '../.rotonde_plugins');
-}
+initializeConfig(defaultConfig);
 
 /**
  * Returns the list of plugins.
