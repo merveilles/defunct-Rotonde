@@ -1,4 +1,4 @@
-import { addPlugin, removePlugin, getPlugins } from '../config';
+import { addPlugin, addLocalPlugin, removePlugin, getPlugins } from '../config';
 import installPlugins from '../plugins';
 
 /**
@@ -10,10 +10,15 @@ export default function pluginsFactory(vorpal) {
   const { chalk } = vorpal;
   vorpal
     .command('plugins install <plugin>')
+    .option('-l, --local', 'Installs a local plugin.')
     .alias('plugins i')
     .description('Installs a plugin.')
     .action(async function (args, callback) {
-      const { plugin } = args;
+      const { plugin, options: { local } } = args;
+      if (local) {
+        addLocalPlugin(plugin);
+        return callback();
+      }
       addPlugin(plugin);
       try {
         await installPlugins();

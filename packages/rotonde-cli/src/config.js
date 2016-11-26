@@ -68,12 +68,31 @@ export function getPlugins() {
  * @param plugin The plugin to add.
  */
 export function addPlugin(plugin) {
-  const { plugins } = config;
-  if (plugins.indexOf(plugin) !== -1) {
-    return;
-  }
-  config.plugins = [...plugins, plugin].sort();
+  config.plugins = addPluginHelper(config.plugins, plugin);
   saveConfig(config);
+}
+
+/**
+ * Adds the specified local plugin to the config.
+ *
+ * @param plugin The plugin to add.
+ */
+export function addLocalPlugin(plugin) {
+  config.localPlugins = addPluginHelper(config.localPlugins, plugin);
+  saveConfig(config);
+}
+
+/**
+ * Returns the list of plugins after adding the specified plugin.
+ *
+ * @param plugins The list of plugins.
+ * @param plugin The plugin to add.
+ */
+function addPluginHelper(plugins, plugin) {
+  if (plugins.indexOf(plugin) !== -1) {
+    return plugins;
+  }
+  return [...plugins, plugin].sort();
 }
 
 /**
@@ -82,14 +101,33 @@ export function addPlugin(plugin) {
  * @param plugin The plugin to remove.
  */
 export function removePlugin(plugin) {
-  const { plugins } = config;
+  config.plugins = removePluginHelper(config.plugins, plugin);
+  saveConfig(config);
+}
+
+/**
+ * Removes the specified local plugin from the config.
+ *
+ * @param plugin The plugin to remove.
+ */
+export function removeLocalPlugin(plugin) {
+  config.localPlugins = removePluginHelper(config.localPlugins, plugin);
+  saveConfig(config);
+}
+
+/**
+ * Returns the list of plugins after removing the specified plugin.
+ *
+ * @param plugins The list of plugins.
+ * @param plugin The plugin to remove.
+ */
+function removePluginHelper(plugins, plugin) {
   const pluginIndex = plugins.indexOf(plugin);
   if (pluginIndex === -1) {
-    return;
+    return plugins;
   }
-  config.plugins = [
+  return [
     ...plugins.slice(0, pluginIndex),
     ...plugins.slice(pluginIndex + 1)
   ].sort();
-  saveConfig(config);
 }
