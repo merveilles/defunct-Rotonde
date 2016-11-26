@@ -1,4 +1,4 @@
-import { addPlugin, getPlugins } from '../config';
+import { addPlugin, removePlugin, getPlugins } from '../config';
 import installPlugins from '../plugins';
 
 /**
@@ -10,6 +10,7 @@ export default function pluginsFactory(vorpal) {
   const { chalk } = vorpal;
   vorpal
     .command('plugins install <plugin>')
+    .alias('plugins i')
     .description('Installs a plugin.')
     .action(async function (args, callback) {
       const { plugin } = args;
@@ -33,7 +34,7 @@ export default function pluginsFactory(vorpal) {
     });
   vorpal
     .command('plugins remove <plugin>')
-    .alias('plugins rm <plugin>')
+    .alias('plugins rm')
     .description('Removes a plugin.')
     .action(async function (args, callback) {
       const { plugin } = args;
