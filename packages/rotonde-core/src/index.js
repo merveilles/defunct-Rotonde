@@ -1,5 +1,5 @@
 import Server from 'socket.io';
-import { installPlugins } from 'rotonde-util-plugin-manager';
+import installPlugins from 'rotonde-util-plugin-manager';
 import server from './server';
 import { getPlugins, getPluginsDirectory } from './config';
 import registerHandlers from './handlers';

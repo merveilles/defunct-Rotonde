@@ -1,2 +1,8 @@
 # Compiled output
 /lib/
+
+# Configuration file
+.rotonde.json
+
+# Plugins directory
+.rotonde_plugins
