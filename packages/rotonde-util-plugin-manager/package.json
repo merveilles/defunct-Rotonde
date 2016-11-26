@@ -1,6 +1,6 @@
 {
   "name": "rotonde-util-plugin-manager",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "A plugin manager for Rotonde.",
   "main": "lib/index.js",
   "scripts": {
