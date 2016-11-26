@@ -6,7 +6,7 @@ import { installPlugins } from '../plugins';
  *
  * @param vorpal The Vorpal instance.
  */
-export function pluginsFactory(vorpal) {
+export default function pluginsFactory(vorpal) {
   vorpal
     .command('plugins install <plugin>')
     .description('Installs a plugin.')
@@ -28,6 +28,20 @@ export function pluginsFactory(vorpal) {
       const plugins = getPlugins();
       this.log(`Installed Plugins (${plugins.length}):`);
       this.log(plugins.map(plugin => `    * ${plugin}`).join('\n'));
+      callback();
+    });
+  vorpal
+    .command('plugins remove <plugin>')
+    .alias('plugins rm <plugin>')
+    .description('Removes a plugin.')
+    .action(async function (args, callback) {
+      const { plugin } = args;
+      removePlugin(plugin);
+      try {
+        await installPlugins();
+      } catch (err) {
+        this.log(chalk.red(err.message));
+      }
       callback();
     });
 }
