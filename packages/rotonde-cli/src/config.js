@@ -12,7 +12,7 @@ let config = Object.assign({}, defaultConfig);
 const configPath = getConfigPath();
 const configFileExists = fs.existsSync(configPath);
 if (!configFileExists) {
-  fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2));
+  saveConfig(defaultConfig);
 }
 const contents = fs.readFileSync(configPath, 'utf-8');
 config = Object.assign({}, config, JSON.parse(contents));
@@ -26,6 +26,19 @@ function getConfigPath() {
     return path.resolve(__dirname, `../${configFile}`);
   }
   return path.resolve(os.homedir(), configFile);
+}
+
+/**
+ * Saves the specified config to the config file.
+ *
+ * @param config The config to save.
+ */
+function saveConfig(config) {
+  try {
+    fs.writeFileSync(getConfigPath(), JSON.stringify(config, null, 2));
+  } catch (err) {
+    throw err;
+  }
 }
 
 /**
@@ -47,4 +60,18 @@ export function getPluginsDirectory() {
  */
 export function getPlugins() {
   return getConfig().plugins;
+}
+
+/**
+ * Adds the specified plugin to the config.
+ *
+ * @param plugin The plugin to add.
+ */
+export function addPlugin(plugin) {
+  let { plugins } = config;
+  if (plugins.indexOf(plugin) !== -1) {
+    return;
+  }
+  config.plugins = [...plugins, plugin].sort();
+  saveConfig(config);
 }
