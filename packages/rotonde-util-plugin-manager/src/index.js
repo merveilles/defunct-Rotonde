@@ -11,6 +11,9 @@ import shellEnv from 'shell-env';
  */
 export function installPlugins(pluginsDirectory, plugins) {
   return new Promise(async (resolve, reject) => {
+    if (!pluginsDirectory) {
+      return reject(new Error(`Invalid plugins directory provided: '${pluginsDirectory}'.`));
+    }
     let env;
     try {
       env = await shellEnv();
