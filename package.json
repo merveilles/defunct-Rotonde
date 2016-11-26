@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "lerna": "lerna",
+    "bootstrap": "lerna bootstrap && node ./scripts/cleanup-packages.js",
     "test": "xo",
     "flow": "flow"
   },
