@@ -1,4 +1,5 @@
-import { addPlugin, addLocalPlugin, removePlugin, getAllPlugins } from '../config';
+import { addPlugin, addLocalPlugin, removePlugin } from 'rotonde-util-config-manager';
+import { getAllPlugins } from '../config';
 import installPlugins from '../plugins';
 
 /**
