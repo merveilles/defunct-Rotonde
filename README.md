@@ -2,6 +2,7 @@
 
 > Decentralized communication protocol.
 
+[![Build Status](https://travis-ci.org/merveilles/Rotonde.svg?branch=master)](https://travis-ci.org/merveilles/Rotonde)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 - [Contributing](#contributing)
