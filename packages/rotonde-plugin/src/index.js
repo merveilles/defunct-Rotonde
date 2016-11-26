@@ -1,2 +1,2 @@
-export * from './RotondeClientPlugin';
-export * from './RotondeServerPlugin';
+export { default as RotondeClientPlugin } from './client';
+export { default as RotondeServerPlugin } from './server';

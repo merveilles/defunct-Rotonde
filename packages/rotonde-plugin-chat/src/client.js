@@ -1,7 +1,7 @@
 import { RotondeClientPlugin } from 'rotonde-plugin';
 import { NAMESPACES, MESSAGES } from 'rotonde-plugin-chat-messages';
 
-export class ChatClientPlugin extends RotondeClientPlugin {
+export default class ChatClientPlugin extends RotondeClientPlugin {
 
   constructor(url) {
     super(`${url}${NAMESPACES.ROTONDE_PLUGIN_CHAT}`);

@@ -3,7 +3,7 @@ import Client from 'socket.io-client';
 /**
  * The base class for a Rotonde client plugin.
  */
-export class RotondeClientPlugin {
+export default class RotondeClientPlugin {
 
   /**
    * Creates a new Rotonde client plugin instance.

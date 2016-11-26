@@ -2,6 +2,7 @@ export default async function deploy(target) {
   if (!isDeploymentTargetSupported(target)) {
     throw new Error(`Unsupported deployment target: '${target}'`);
   }
+  // eslint-disable-next-line import/no-dynamic-require
   require(`rotonde-deploy-${target}`)();
 }
 
@@ -12,6 +13,7 @@ export default async function deploy(target) {
  */
 export function isDeploymentTargetSupported(target) {
   try {
+    // eslint-disable-next-line import/no-dynamic-require
     require(`rotonde-deploy-${target}`);
     return true;
   } catch (err) {

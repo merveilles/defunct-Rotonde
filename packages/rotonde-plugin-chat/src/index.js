@@ -1,2 +1,2 @@
-export * from './ChatClientPlugin';
-export * from './ChatServerPlugin';
+export { default as ChatClientPlugin } from './client';
+export { default as ChatServerPlugin } from './server';

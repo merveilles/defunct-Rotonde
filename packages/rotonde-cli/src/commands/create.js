@@ -1,4 +1,3 @@
-import Client from 'socket.io-client';
 import deploy, {
   isDeploymentTargetSupported
 } from 'rotonde-deploy';
@@ -8,7 +7,7 @@ import deploy, {
  *
  * @param vorpal The Vorpal instance.
  */
-export function createFactory(vorpal) {
+export default function createFactory(vorpal) {
   const { chalk } = vorpal;
   vorpal
     .command('create')
