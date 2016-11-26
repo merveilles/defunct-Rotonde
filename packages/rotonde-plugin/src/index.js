@@ -7,6 +7,23 @@ export { default as RotondeServerPlugin } from './server';
 export const PLUGIN_TYPE = {
 
   /**
+   * A plugin.
+   */
+  PLUGIN: 'PLUGIN',
+
+  /**
+   * A client adapter for a plugin.
+   */
+  CLIENT_ADAPTER: 'CLIENT_ADAPTER'
+
+};
+
+/**
+ * The possible plugin environments.
+ */
+export const PLUGIN_ENVIRONMENT = {
+
+  /**
    * An isomorphic plugin that runs on the client and the server.
    */
   ISOMORPHIC: 'ISOMORPHIC',
