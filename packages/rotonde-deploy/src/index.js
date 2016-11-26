@@ -1,4 +1,6 @@
-export default async function deploy(target) {
+// @flow
+
+export default async function deploy(target: string) {
   if (!isDeploymentTargetSupported(target)) {
     throw new Error(`Unsupported deployment target: '${target}'`);
   }
@@ -11,7 +13,7 @@ export default async function deploy(target) {
  *
  * @param target The target to check.
  */
-export function isDeploymentTargetSupported(target) {
+export function isDeploymentTargetSupported(target: string) {
   try {
     // eslint-disable-next-line import/no-dynamic-require
     require(`rotonde-deploy-${target}`);
