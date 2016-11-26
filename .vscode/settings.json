@@ -19,6 +19,7 @@
   },
   "xo.enable": true,
   "xo.options": {
+    "cache": false,
     "parser": "babel-eslint",
     "space": 2,
     "esnext": true,

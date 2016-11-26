@@ -15,6 +15,7 @@
     "xo": "^0.17.1"
   },
   "xo": {
+    "cache": false,
     "parser": "babel-eslint",
     "space": 2,
     "esnext": true,
