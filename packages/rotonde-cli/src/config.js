@@ -14,7 +14,7 @@ const configFileExists = fs.existsSync(configPath);
 if (!configFileExists) {
   saveConfig(defaultConfig);
 }
-const contents = fs.readFileSync(configPath, 'utf-8');
+const contents = fs.readFileSync(configPath, 'utf8');
 config = Object.assign({}, config, JSON.parse(contents));
 
 /**

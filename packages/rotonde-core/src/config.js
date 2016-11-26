@@ -9,7 +9,7 @@ const defaultConfig = {
 let config = Object.assign({}, defaultConfig);
 
 const configFile = path.join(__dirname, '../.rotonde.json');
-const contents = fs.readFileSync(configFile, 'utf-8');
+const contents = fs.readFileSync(configFile, 'utf8');
 config = Object.assign({}, config, JSON.parse(contents));
 
 /**
