@@ -25,6 +25,9 @@
     "lib/"
   ],
   "dependencies": {
+    "rotonde-plugin": "^1.0.6"
+  },
+  "peerDependencies": {
     "rotonde-plugin-chat": "^1.0.6"
   },
   "devDependencies": {

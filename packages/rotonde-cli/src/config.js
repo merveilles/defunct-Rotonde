@@ -1,6 +1,7 @@
 import os from 'os';
 import path from 'path';
 import fs from 'fs-extra';
+import { PLUGIN_TYPE } from 'rotonde-plugin';
 
 const defaultConfig = {
   plugins: [],
@@ -104,6 +105,14 @@ export function loadPlugins() {
   return [...plugins, ...localPlugins]
     .map(loadPlugin)
     .filter(plugin => Boolean(plugin));
+}
+
+export function getClientAdapters(plugins) {
+  return plugins.filter(plugin => plugin.TYPE === PLUGIN_TYPE.CLIENT_ADAPTER);
+}
+
+export function loadClientAdapters() {
+  return getClientAdapters(loadPlugins());
 }
 
 /**

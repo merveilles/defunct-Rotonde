@@ -33,6 +33,7 @@
     "fs-extra": "^1.0.0",
     "rotonde-core-messages": "^1.0.5",
     "rotonde-deploy": "^1.0.5",
+    "rotonde-plugin": "^1.0.6",
     "rotonde-util-plugin-manager": "^1.0.7",
     "socket.io-client": "^1.6.0",
     "vorpal": "^1.11.4"
