@@ -6,6 +6,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 - [Contributing](#contributing)
+- [Plugins](#plugins)
 - [Packages](#packages)
   - [Core Packages](#core-packages)
   - [Client Packages](#client-packages)
@@ -17,6 +18,12 @@
 ## Contributing
 
 Want to contribute to Rotonde? Have a look at our [contributing documentation](/CONTRIBUTING.md).
+
+## Plugins
+
+| Plugin | Client | Server | CLI | UI |
+|--------|:------:|:------:|:---:|----|
+| [`rotonde-plugin-chat`](/packages/rotonde-plugin-chat) | &#10003; | &#10003; | [&#10003;](/packages/rotonde-plugin-chat-client-adapter-cli) | &#10007; |
 
 ## Packages
 
