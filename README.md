@@ -62,10 +62,10 @@ The plugin packages extend Rotonde core and the various Rotonde clients with add
 
 The `rotonde-plugin` package contains the base classes for the client and server components of a Rotonde plugin.
 
-#### [`rotonde-chat-plugin`](/packages/rotonde-chat-plugin)
+#### [`rotonde-plugin-chat`](/packages/rotonde-plugin-chat)
 
-[![npm](https://img.shields.io/npm/v/rotonde-chat-plugin.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-chat-plugin)
-[![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-chat-plugin)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-chat-plugin)
+[![npm](https://img.shields.io/npm/v/rotonde-plugin-chat.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-plugin-chat)
+[![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-plugin-chat)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-plugin-chat)
 
 The `rotonde-plugin-chat` package extends Rotonde with chat functionality.
 
