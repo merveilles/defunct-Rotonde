@@ -15,10 +15,26 @@ export default class RotondeClientPlugin {
   }
 
   /**
-   * The Socket.IO client instance.
+   * Publishes a message.
+   *
+   * @param messageId The ID of the message.
+   * @param payload The message payload.
    */
-  get client() {
-    return this._client;
+  publish(messageId, payload) {
+    this._client.emit(messageId, payload);
+  }
+
+  /**
+   * Returns a promise the resolves when a message with the specified ID is received.
+   *
+   * @param messageId The ID of the message to which to subscribe.
+   */
+  subscribe(messageId) {
+    return new Promise(resolve => {
+      this._client.on(messageId, payload => {
+        resolve(payload);
+      });
+    });
   }
 
 }

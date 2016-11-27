@@ -9,7 +9,7 @@ function initialize(vorpal) {
     .init(function (args, callback) {
       const { instance } = args;
       plugin = new ChatClientPlugin(instance);
-      plugin.handleReceiveMessage(({ message, user }) => {
+      plugin.receiveMessage().then(({ message, user }) => {
         this.log(`<${user}>: ${message}`);
       });
       this.log(`Chatting on: ${instance}`);

@@ -8,16 +8,15 @@ export default class ChatClientPlugin extends RotondeClientPlugin {
   }
 
   sendMessage(user, message) {
-    this.client.emit(MESSAGES.ROTONDE_PLUGIN_CHAT.MESSAGE, {
+    return this.publish(MESSAGES.ROTONDE_PLUGIN_CHAT.MESSAGE, {
       user,
-      message
+      message,
+      timestamp: new Date()
     });
   }
 
-  handleReceiveMessage(callback) {
-    this.client.on(MESSAGES.ROTONDE_PLUGIN_CHAT.MESSAGE, payload => {
-      callback(payload);
-    });
+  receiveMessage() {
+    return this.subscribe(MESSAGES.ROTONDE_PLUGIN_CHAT.MESSAGE);
   }
 
 }
