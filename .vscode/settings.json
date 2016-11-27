@@ -4,6 +4,7 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.renderWhitespace": "boundary",
+  "editor.wrappingIndent": "indent",
   "javascript.validate.enable": false,
   "files.exclude": {
     "**/.git": true,
