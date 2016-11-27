@@ -1,13 +1,15 @@
 import path from 'path';
+import { homedir } from 'os';
 import { initializeConfig, getConfig, getPluginsDirectory } from 'rotonde-util-config-manager';
 import { PLUGIN_TYPE } from 'rotonde-plugin';
 
+const configDirectory = process.env.NODE_ENV === 'development' ? path.join(__dirname, '../') : homedir();
 const defaultConfig = {
   plugins: [],
   localPlugins: []
 };
 
-initializeConfig(defaultConfig);
+initializeConfig(configDirectory, defaultConfig);
 
 /**
  * Returns the list of plugins.

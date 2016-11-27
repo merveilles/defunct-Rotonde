@@ -2,6 +2,7 @@ import os from 'os';
 import path from 'path';
 import fs from 'fs-extra';
 
+let configDirectory = process.env.NODE_ENV === 'development' ? path.join(__dirname, '../') : os.homedir();
 let config = {};
 
 /**
@@ -9,7 +10,8 @@ let config = {};
  *
  * @param defaultConfig The default configuration.
  */
-export function initializeConfig(defaultConfig = {}) {
+export function initializeConfig(directory, defaultConfig = {}) {
+  configDirectory = directory;
   const configPath = getConfigPath();
   const configFileExists = fs.existsSync(configPath);
   if (!configFileExists) {
@@ -24,10 +26,7 @@ export function initializeConfig(defaultConfig = {}) {
  */
 function getConfigPath() {
   const configFile = '.rotonde.json';
-  if (process.env.NODE_ENV === 'development') {
-    return path.resolve(__dirname, `../${configFile}`);
-  }
-  return path.resolve(os.homedir(), configFile);
+  return path.resolve(configDirectory, configFile);
 }
 
 /**
@@ -55,10 +54,7 @@ export function getConfig() {
  */
 export function getPluginsDirectory() {
   const pluginsDirectory = '.rotonde_plugins';
-  if (process.env.NODE_ENV === 'development') {
-    return path.join(__dirname, `../${pluginsDirectory}`);
-  }
-  return path.join(os.homedir(), pluginsDirectory);
+  return path.join(configDirectory, pluginsDirectory);
 }
 
 /**

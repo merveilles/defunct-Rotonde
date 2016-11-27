@@ -1,12 +1,13 @@
 import path from 'path';
 import { initializeConfig, getConfig, getPluginsDirectory } from 'rotonde-util-config-manager';
 
+const configDirectory = path.join(__dirname, '../');
 const defaultConfig = {
   plugins: [],
   localPlugins: []
 };
 
-initializeConfig(defaultConfig);
+initializeConfig(configDirectory, defaultConfig);
 
 /**
  * Returns the list of plugins.
