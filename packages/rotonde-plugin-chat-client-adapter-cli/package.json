@@ -1,6 +1,6 @@
 {
   "name": "rotonde-plugin-chat-client-adapter-cli",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "CLI client adapter for `rotonde-plugin-chat`.",
   "main": "lib/index.js",
   "scripts": {
@@ -25,8 +25,8 @@
     "lib/"
   ],
   "dependencies": {
-    "rotonde-plugin": "^1.0.8",
-    "rotonde-plugin-chat": "^1.0.6"
+    "rotonde-plugin": "^1.0.9",
+    "rotonde-plugin-chat": "^1.0.9"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

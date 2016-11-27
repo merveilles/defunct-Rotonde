@@ -1,6 +1,6 @@
 {
   "name": "rotonde-util-config-manager",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A config manager for Rotonde.",
   "main": "lib/index.js",
   "scripts": {
