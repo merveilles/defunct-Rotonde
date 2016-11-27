@@ -10,6 +10,7 @@
   - [Core Packages](#core-packages)
   - [Client Packages](#client-packages)
   - [Plugin Packages](#plugin-packages)
+  - [Client Adapter Packages](#client-adapter-packages)
   - [Deployment Packages](#deployment-packages)
   - [Utility Packages](#utility-packages)
 
@@ -61,6 +62,24 @@ The plugin packages extend Rotonde core and the various Rotonde clients with add
 
 The `rotonde-plugin` package contains the base classes for the client and server components of a Rotonde plugin.
 
+#### [`rotonde-chat-plugin`](/packages/rotonde-chat-plugin)
+
+[![npm](https://img.shields.io/npm/v/rotonde-chat-plugin.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-chat-plugin)
+[![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-chat-plugin)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-chat-plugin)
+
+The `rotonde-plugin-chat` package extends Rotonde with chat functionality.
+
+### Client Adapter Packages
+
+The client adapter packages are used in conjunction with [plugin packages](#plugin-packages) in order to provide the plugin functionality to a particular [Rotonde client](#client-packages).
+
+#### [`rotonde-plugin-chat-client-adapter-cli`](/packages/rotonde-plugin-chat-client-adapter-cli)
+
+[![npm](https://img.shields.io/npm/v/rotonde-plugin-chat-client-adapter-cli.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-plugin-chat-client-adapter-cli)
+[![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-plugin-chat-client-adapter-cli)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-plugin-chat-client-adapter-cli)
+
+The `rotonde-plugin-chat-client-adapter-cli` package exposes the CLI client adapter for the `rotonde-plugin-chat` package.
+
 ### Deployment Packages
 
 The deployment packages provide the ability to deploy Rotonde instances to a variety of hosting locations.
@@ -82,6 +101,13 @@ The `rotonde-deploy-now` package provides the ability to deploy a Rotonde instan
 ### Utility Packages
 
 The utility packages are used to share common functionality between Rotonde packages. These will mostly be used by Rotonde core.
+
+#### [`rotonde-util-config-manager`](/packages/rotonde-util-config-manager)
+
+[![npm](https://img.shields.io/npm/v/rotonde-util-config-manager.svg?maxAge=2592000)](https://www.npmjs.com/package/rotonde-util-config-manager)
+[![Dependency Status](https://david-dm.org/merveilles/Rotonde.svg?path=packages/rotonde-util-config-manager)](https://david-dm.org/merveilles/Rotonde?path=packages/rotonde-util-config-manager)
+
+The `rotonde-util-config-manager` provides the ability to manage configuration files for Rotonde core and Rotonde clients.
 
 #### [`rotonde-util-plugin-manager`](/packages/rotonde-util-plugin-manager)
 
