@@ -22,7 +22,7 @@ Want to contribute to Rotonde? Have a look at our [contributing documentation](/
 ## Plugins
 
 | Plugin | Client | Server | CLI | UI |
-|--------|:------:|:------:|:---:|----|
+|--------|:------:|:------:|:---:|:--:|
 | [`rotonde-plugin-chat`](/packages/rotonde-plugin-chat) | &#10003; | &#10003; | [&#10003;](/packages/rotonde-plugin-chat-client-adapter-cli) | &#10007; |
 
 ## Packages
