@@ -1,0 +1,58 @@
+baseurl = "https://merveilles.github.io/Rotonde/"
+languageCode = "en-us"
+title = "Rotonde"
+theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = ""
+
+[params]
+  # General information
+  author = "Merveilles"
+  description = "Decentralized communication protocol."
+  copyright = "Released under the MIT license"
+
+  # Repository
+  provider = "GitHub"
+  repo_url = "https://github.com/merveilles/Rotonde"
+
+  version = "1.0.0"
+  logo = "images/logo.png"
+  favicon = ""
+
+  permalink = "#"
+
+  # Custom assets
+  custom_css = []
+  custom_js  = []
+
+  # Syntax highlighting theme
+  highlight_css  = ""
+
+  [params.palette]
+      primary = "blue-grey"
+      accent  = "deep-orange"
+
+    [params.font]
+      text = "Ubuntu"
+      code = "Ubuntu Mono"
+
+
+[social]
+  twitter = ""
+  github  = "merveilles"
+  email   = ""
+
+
+[[menu.main]]
+  name   = "Rotonde"
+  url    = "/"
+  weight = 0
+
+
+[blackfriday]
+  smartypants = true
+  fractions = true
+  smartDashes = true
+  plainIDAnchors = true
