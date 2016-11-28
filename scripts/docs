@@ -1,0 +1,7 @@
+#!/bin/sh
+
+pushd docs
+rm -rf public
+hugo
+popd
+git subtree push --prefix docs/public origin gh-pages
