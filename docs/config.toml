@@ -31,8 +31,8 @@ googleAnalytics = ""
   highlight_css  = ""
 
   [params.palette]
-      primary = "blue-grey"
-      accent  = "deep-orange"
+      primary = "cyan"
+      accent  = "indigo"
 
     [params.font]
       text = "Ubuntu"
@@ -49,6 +49,16 @@ googleAnalytics = ""
   name   = "Rotonde"
   url    = "/"
   weight = 0
+
+[[menu.main]]
+  name   = "Getting Started"
+  url    = "getting-started/"
+  weight = 10
+
+[[menu.main]]
+  name   = "Contributing"
+  url    = "contributing/"
+  weight = 20
 
 
 [blackfriday]
