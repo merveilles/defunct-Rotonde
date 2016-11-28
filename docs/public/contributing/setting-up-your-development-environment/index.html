@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Setting Up Your Development Environment - Rotonde</title>
+    <meta name="generator" content="Hugo 0.17" />
+
+    
+    <meta name="description" content="Decentralized communication protocol.">
+    
+    <link rel="canonical" href="https://merveilles.github.io/Rotonde/contributing/setting-up-your-development-environment/">
+    
+    <meta name="author" content="Merveilles">
+    
+
+    <meta property="og:url" content="https://merveilles.github.io/Rotonde/contributing/setting-up-your-development-environment/">
+    <meta property="og:title" content="Rotonde">
+    <meta property="og:image" content="https://merveilles.github.io/Rotonde/images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="Rotonde">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://merveilles.github.io/Rotonde/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://merveilles.github.io/Rotonde/images/favicon.ico">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://merveilles.github.io/Rotonde/fonts/icon.eot?52m981');
+        src: url('https://merveilles.github.io/Rotonde/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+             url('https://merveilles.github.io/Rotonde/fonts/icon.woff?52m981')
+               format('woff'),
+             url('https://merveilles.github.io/Rotonde/fonts/icon.ttf?52m981')
+               format('truetype'),
+             url('https://merveilles.github.io/Rotonde/fonts/icon.svg?52m981#icon')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://merveilles.github.io/Rotonde/stylesheets/application.css">
+    <link rel="stylesheet" href="https://merveilles.github.io/Rotonde/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://merveilles.github.io/Rotonde/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://merveilles.github.io/Rotonde/stylesheets/highlight/highlight.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://merveilles.github.io/Rotonde/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-cyan palette-accent-indigo">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Setting Up Your Development Environment
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/merveilles" title="@merveilles on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+    
+        
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="https://github.com/merveilles/Rotonde" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://merveilles.github.io/Rotonde/images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>Rotonde <span class="version">1.0.0</span></strong>
+        
+          <br>
+          merveilles/Rotonde
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/merveilles/Rotonde/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/merveilles/Rotonde/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Rotonde" href="https://merveilles.github.io/Rotonde/">
+	
+	Rotonde
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Getting Started" href="https://merveilles.github.io/Rotonde/getting-started/">
+	
+	Getting Started
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Contributing" href="https://merveilles.github.io/Rotonde/contributing/">
+	
+	Contributing
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">The author</span>
+        
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/merveilles" target="_blank" title="@merveilles on GitHub">
+              @merveilles on GitHub
+            </a>
+          </li>
+          
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Setting Up Your Development Environment </h1>
+
+			
+
+<p>There are a few things you will need if you want to develop for Rotonde.</p>
+
+<p><strong>NOTE:</strong> In the command line examples below, the dollar sign (<code>$</code>) at the start of each line is used to indicate the start of a shell command. It should not be entered as part of the command.</p>
+
+<h2 id="git">Git</h2>
+
+<p>If you do not have it already, you can download and install Git from <a href="https://git-scm.com/downloads">here</a>.</p>
+
+<h2 id="node-js">Node.js</h2>
+
+<p>Rotonde is written in JavaScript running on Node.js, so it will need to be installed on your system.</p>
+
+<h3 id="macos-linux">macOS &amp; Linux</h3>
+
+<p>The best way to install Node.js is to use <a href="https://github.com/creationix/nvm">nvm</a>. Follow the instructions there to install <code>nvm</code> on your system. This will allow you to easily install and switch between multiple versions of Node.js.</p>
+
+<p>Once it&rsquo;s installed, you can install the latest version of Node.js by following the instructions below:</p>
+
+<pre><code class="language-sh"># List the available Node.js versions
+$ nvm ls-remote
+
+# Install the latest version of Node.js available (v7.2.0 at time of writing)
+$ nvm install 7.2.0
+
+# Alias the version just installed as `default`.
+# This will cause `nvm` to remember and use this version by default when opening other command line windows.
+$ nvm alias default 7.2.0
+
+# Use the default version
+$ nvm use default
+</code></pre>
+
+<h3 id="windows">Windows</h3>
+
+<p>Download and install Node.js <a href="https://nodejs.org/en/download/current/">here</a>.</p>
+
+<h2 id="getting-the-source-code">Getting the Source Code</h2>
+
+<h3 id="fork-the-repository">Fork the Repository</h3>
+
+<p>Go to the main repository page (<a href="https://github.com/merveilles/Rotonde">merveilles/Rotonde</a>), and click the <strong>Fork</strong> button in the upper right-hand corner of the screen to fork the repository to your own GitHub profile.</p>
+
+<p>You will now have a copy of the repository on your GitHub profile.</p>
+
+<h3 id="clone-the-repository">Clone the Repository</h3>
+
+<pre><code class="language-sh"># Clone the repository onto your local system.
+# This will create a `Rotonde` directory in the directory you run the command.
+# NOTE: Replace &quot;your-username&quot; with your GitHub username.
+$ git clone git@github.com:your-username/Rotonde.git
+</code></pre>
+
+<h3 id="create-a-new-branch">Create a new branch</h3>
+
+<p>Once you have cloned the repository, create a new branch for your changes:</p>
+
+<pre><code class="language-sh"># Create a new Git branch for your changes
+# NOTE: Ideally you should use a clear and expressive name!
+$ git checkout -b my-expressive-branch-name
+</code></pre>
+
+<h2 id="submitting-a-pull-request">Submitting a Pull Request</h2>
+
+<p>Changes to Rotonde are to be submitted via a GitHub <a href="https://help.github.com/articles/about-pull-requests/">Pull Request</a>.</p>
+
+<h3 id="your-first-pull-request">Your First Pull Request</h3>
+
+<p>Working on your first Pull Request? You can learn how from this free video series: <a href="https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github">How to Contribute to an Open Source Project on GitHub</a>.</p>
+
+<h3 id="submitting-a-pull-request-1">Submitting a Pull Request</h3>
+
+<p>We will review your pull request and either merge it, request changes to it, or close it with an explanation.</p>
+
+<p>Before submitting a pull request, please make sure the following is done:</p>
+
+<ul>
+<li>Fork <a href="https://github.com/merveilles/Rotonde">the repository</a> and create your branch from master.</li>
+<li>Ensure the code lints and the test suite passes (<code>npm test</code>).</li>
+</ul>
+
+
+			<aside class="copyright" role="note">
+				
+				&copy; 2016 Released under the MIT license &ndash;
+				
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://merveilles.github.io/Rotonde/" title="Rotonde">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Rotonde
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://merveilles.github.io/Rotonde/contributing/" title="Contributing">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Contributing
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/merveilles.github.io\/Rotonde\/';
+      var repo_id  = 'merveilles\/Rotonde';
+    
+    </script>
+
+    <script src="https://merveilles.github.io/Rotonde/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+            
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+        
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script src="//gohugo.io/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
