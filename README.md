@@ -1,6 +1,8 @@
-# Rotonde
+# defunct-Rotonde
 
-> Decentralized communication protocol.
+> You were probably looking for [this Rotonde](https://github.com/Rotonde).
+
+
 
 [![Build Status](https://travis-ci.org/merveilles/Rotonde.svg?branch=master)](https://travis-ci.org/merveilles/Rotonde)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
